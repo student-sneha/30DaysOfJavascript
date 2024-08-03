@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30Daysofcoding</title>
+    <title>30DaysOfJavscript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+    <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <!-- Basics -->
-     <p id="demo">You are learning javscript</p>
-     <button onclick="document.getElementById('demo').innerText= 'W3 school'">Click me</button>
+ <section id="game">
+    <!-- Name of the game -->
+    <h1 id="title">Rock  Paper  Scissor</h1>
 
-    <script>
-      
-        console.log("30daysofcodechallenge!!");
-    </script>
+    <!-- ScoreBoard of player & computer -->
+    <div class="score">
+        <div class="player-score">
+            <h2>Player:</h2>
+            <p class="p-count count">0</p>
+        </div>
+        <div class="computer-score">
+           <h2>Computer:</h2>
+           <p class="c-count count">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-----Moves left to play game -->
+    <div class="move">Choose your weapons!</div>
+    
+    <div class="movesleft">Moves Left : 10</div>
+
+    <!-- buttons rock paper scissors -->
+     <div class="options">
+        <button class='btn' id="rock">  <i class="fas fa-hand-rock"></i></button>
+        <button class='btn' id="paper">  <i class="fas fa-hand-paper"></i></button>
+        <button class='btn' id="scissor">  <i class="fas fa-hand-scissors"></i></button>
+     </div>
+
+    <!--------------Computer Choose  ---------->
+
+    <div class="computerChoice"></div>
+
+     <!--------------Show  Result ---------->
+     <div class="result"></div>
+
+       <!--------------Restart the Game ---------->
+       <div class="reload">Play Again</div>
+    
+ </section>
+
+
+
+    <script src="app.js"></script>
 </body>
 </html>

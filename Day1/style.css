@@ -1,0 +1,137 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: hsl(264, 48%, 79%);
+  color: #040508;
+  scroll-behavior: smooth;
+}
+/*---------------- heading------------------- */
+#title {
+  font-size: 4.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+/*-----------------scoreboard--------------- */
+.score {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  /* padding:10px; */
+}
+
+.player-score,
+.computer-score {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #040508;
+  padding: 1.3rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0.3rem #291833;
+  background-color: #140a1a;
+  color: #b39fbf;
+}
+.count {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.move {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+.movesleft {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #160c1c;
+}
+.options {
+  margin-top: 1.2rem;
+  padding: 10px;
+}
+.btn {
+  padding: 1.8rem;
+  margin: 1rem 2rem;
+  box-shadow: 0 0 1rem #291833;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.btn i {
+  font-size: 3.3rem;
+}
+.btn:hover {
+  i {
+    font-size: 4rem;
+    color: #291833;
+  }
+}
+
+.computerChoice {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #3f145c;
+}
+
+/* show result */
+.result {
+  color: #140a1a;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  color: #100616;
+  margin-top:2rem;
+}
+
+/*------------------ Restart button*/
+.reload {
+  display: none;
+  margin: 2rem auto 2rem auto;
+  padding: 1rem 2rem;
+  width:10%;
+  border: none;
+  border-radius: 10px;
+  background-color:#13071c;
+  color: #dccce8;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/*-------------------------Responsive css--------------------------------*/
+
+@media only screen and (max-width: 460px) {
+  #title {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .score {
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .player-score,
+  .computer-score {
+    margin-top: 1rem;
+  }
+  .btn {
+    margin: 1rem 1rem;
+  }
+  .result {
+    margin: 1rem;
+  }
+  .reload {
+    margin-top: 1rem;
+    width: 25%;
+    padding:1rem 2rem;
+    
+  }
+}
