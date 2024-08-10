@@ -1,100 +1,133 @@
+let moves = 0;
 let playerScore = 0;
-let computerScore =0;
-let moves =0;
+let comScore = 0;
 
-const choices = document.querySelectorAll(".btn");
+const options = document.querySelectorAll(".btn");
+const move = document.querySelector(".moves-left");
 const result = document.querySelector(".result");
-const playScoreBoard = document.querySelector(".p-count");
-const compScoreBoard = document.querySelector(".c-count");
+const playerScoreBoard = document.querySelector(".p-count");
+const comScoreBoard = document.querySelector(".c-count");
+const compChoiceDisplay =  document.querySelector(".com-choice");
+const choiceweapon = document.querySelector(".move");
+const restart  = document.querySelector(".restart");
 
-/*-----------------------Generate Random computer choice--------------------------*/
-const genCompChoice = () =>{
-    const options = ["rock","paper","scissors"];
-    const ranIdx = Math.floor(Math.random() *3);
-    return options[ranIdx];
-}
+const getChoice = () => {
+  let option = ["rock", "paper", "scissor"];
+  const random = Math.floor(Math.random() * 3);
+  return option[random];
+};
 
-/*-------------------------Draw Game--------------------------------*/
-const drawGame = () => {
-    result.innerHTML = "It's a tie";
-    result.style.color = "#696175";
-}
-
-/*------------------------ Show Winner --------------------------------*/
-const showWinner = (userWin,playerChoice,computerChoice) =>{
-    if(userWin) {
-        playerScore++;
-        playScoreBoard.innerHTML = playerScore;
-        result.innerHTML = `You win!😊`;
-        result.style.color ="green";
-    }else{
-        computerScore++;
-        compScoreBoard.innerHTML = playerScore;
-        result.innerHTML = "You lose!😔";
-        result.style.color ="red";
+const winner = (playerScore,comScore)=>{
+    if(playerScore > comScore){
+        result.innerText = "User Win!!😊";
+        result.style.background ="#58386a";
+        result.style.color="#fff";
     }
+    else if(playerScore < comScore){
+        result.innerText = "Computer Win!!😔";
+        result.style.background ="#994891";
+        result.style.color="#fff";
+    }
+    else {
+        result.innerText ="It's a Tie, Play Again";
+        result.style.background ="#25222c";
+        result.style.color="#fff";
+    }
+};
+
+
+const gameOver = (playerChoice,move) =>{
+   hideBtn();
+ 
+   winner(playerScore,comScore);
+
+   choiceweapon.innerText = "GAME OVER!!";
+   choiceweapon.style.fontsize='4rem';
+
+   restart.innerText = "Play Again";
+   restart.style.margin="2rem";
+   
+   restart.addEventListener("click" ,()=>{
+    window.location.reload();
+   });
+   
 }
 
-/*-------------------------PlayGame --------------------------------*/
-
-const playGame = (playerChoice) =>{
-        const computerChoice = genCompChoice();
-        document.querySelector(".computerChoice").innerHTML = `Computer Choice ${computerChoice}`;
-
-      if(playerChoice === computerChoice) {
-        drawGame();
-      }else {
-       
-        let userWin = true;
-        if(playerChoice === "rock") {
-          userWin = computerChoice === "paper" ? false : true;
-        }else if(playerChoice === "paper"){
-            userWin = computerChoice === "scissors" ? false :true;
-        }else{
-            userWin = computerChoice === "rock" ? false: true;
-        }
-        showWinner(userWin,playerChoice,computerChoice);
-      }
-};
-
-/*------------------------Game over-------------------------------*/
-
-const gameOver = (playerChoice,moveleft) =>{
-    const move= document.querySelector(".move");
-    const movesleft = document.querySelector(".movesleft");
-    const comDisplay = document.querySelector(".computerChoice");
-    const reload = document.querySelector('.reload');
-
-    move.innerHTML = "GameOver!!😑";
-    move.style.fontSize= "4rem";
-    movesleft.style.display= "none";
-
-    comDisplay.style.display ='none';
-
-    choices.forEach(btn => {
+// to hide all the btns when game is complete
+const hideBtn = ()=>{
+    move.style.display='none';
+  
+    options.forEach(btn => {
         btn.style.display ='none';
-})  
-reload.style.display= 'flex';
-       
-reload.addEventListener('click', () =>{
-    window.location.reload();
-})
-
+    });
+   
+    compChoiceDisplay.style.display='none';
 };
 
-/*-------------------------Access the buttons--------------------------------*/
-choices.forEach((btn) =>{
-    btn.addEventListener("click", () => {
-        const playerChoice = btn.getAttribute('id');
-       
-        const moveleft = document.querySelector(".movesleft");
-        moves++;
-        moveleft.innerHTML = `Moves Left : ${10 -moves}`;
-       
-        playGame(playerChoice);
 
-        if(moves == 10){
-            gameOver(playerChoice,moveleft);
+// Play Game 
+const playGame = (playerChoice) => {
+
+    //function to random computer choice
+    const compChoice = getChoice();
+    
+    // computerChoice Display
+    compChoiceDisplay.innerHTML = `Computer Choose ${compChoice}`;
+
+    if(playerChoice == compChoice){
+        result.innerText ="It's a Tie";
+    }
+    else{
+        if(playerChoice == "rock"){  
+            if(compChoice== "paper"){
+                result.innerText = "Computer win😊";
+                comScore++;
+                comScoreBoard.innerText = comScore;
+            }else{
+                result.innerText = "User win😊";
+                playerScore++;
+                playerScoreBoard.innerText = playerScore;
+            }
+        }else if(playerChoice == "paper") { 
+            if(compChoice== "scissor"){
+                result.innerText = "Computer win😊";
+                comScore++;
+                comScoreBoard.innerText = comScore;
+            }else{
+                result.innerText = "User win😊";
+                playerScore++;
+                playerScoreBoard.innerText = playerScore;
+            }
         }
-    });
+        else  { 
+            if(compChoice== "rock"){
+                result.innerText = "Computer win😊";
+                comScore++;
+                comScoreBoard.innerText = comScore;
+            }else{
+                result.innerText = "User win😊";
+                playerScore++;
+                playerScoreBoard.innerText = playerScore;
+            }
+        }
+    }
+};
+
+options.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const playerChoice = btn.getAttribute("id");
+
+    moves++;
+    move.innerHTML = `Moves left :${10 - moves}`;
+
+    playGame(playerChoice);
+
+    if (moves == 10) {
+      console.log("Game Over!!");
+      gameOver(playerChoice,move);
+    }
+    restart.addEventListener("click" ,()=>{
+        window.location.reload();
+    });    
+  });
 });

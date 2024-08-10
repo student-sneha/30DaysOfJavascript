@@ -9,49 +9,47 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
- <section id="game">
-    <!-- Name of the game -->
-    <h1 id="title">Rock  Paper  Scissor</h1>
-
-    <!-- ScoreBoard of player & computer -->
-    <div class="score">
-        <div class="player-score">
-            <h2>Player:</h2>
-            <p class="p-count count">0</p>
-        </div>
-        <div class="computer-score">
-           <h2>Computer:</h2>
-           <p class="c-count count">0</p>
+    <div class="container">
+        <div class="game">
+    
+          <!-- Game name -->
+          <h1 id="heading">Rock Paper Scissor</h1>
+    
+          <!-- Scoreboard to print the winning score of player & computer -->
+          <div class="score-board">
+            <div class="player-score">
+              <h3>Player</h3>
+              <p class="p-count count">0</p>
             </div>
+            <div class="com-score">
+              <h3>Computer</h3>
+              <p class="c-count count">0</p>
+            </div>
+          </div>
+    
+          <div class="move">Choose your weapons!!</div>
+    
+          <!-- Examine the move left -->
+          <div class="moves-left">Moves left :10</div>
+    
+          <!-- All the buttons -->
+          <div class="options">
+            <button class="btn" id="rock"> <i class="fas fa-hand-rock"></i></button>
+            <button class="btn" id="paper"> <i class="fas fa-hand-paper"></i></button>
+            <button class="btn" id="scissor"> <i class="fas fa-hand-scissors"></i></button>
+          </div>
+    
+          <!-- Computer choice display  -->
+          <div class="com-choice"></div>
+    
+          <!-- Result Display -->
+          <div class="result"></div>
+    
+          <!-- Restart the game  -->
+          <button class="restart"> Restart</button>
+    
         </div>
-    </div>
-
-    <!-----Moves left to play game -->
-    <div class="move">Choose your weapons!</div>
-    
-    <div class="movesleft">Moves Left : 10</div>
-
-    <!-- buttons rock paper scissors -->
-     <div class="options">
-        <button class='btn' id="rock">  <i class="fas fa-hand-rock"></i></button>
-        <button class='btn' id="paper">  <i class="fas fa-hand-paper"></i></button>
-        <button class='btn' id="scissor">  <i class="fas fa-hand-scissors"></i></button>
-     </div>
-
-    <!--------------Computer Choose  ---------->
-
-    <div class="computerChoice"></div>
-
-     <!--------------Show  Result ---------->
-     <div class="result"></div>
-
-       <!--------------Restart the Game ---------->
-       <div class="reload">Play Again</div>
-    
- </section>
-
-
-
+      </div>
     <script src="app.js"></script>
 </body>
 </html>
