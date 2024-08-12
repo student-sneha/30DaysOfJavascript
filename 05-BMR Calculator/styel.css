@@ -1,0 +1,217 @@
+/* *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(132deg,#333,#444);
+}
+.bmr-calculator{  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    border-radius: 10px;
+    background-color: #878585;
+}
+.bmr-calculator h2{
+    text-align: center;
+    background: #222;
+    color:#fff;
+    font-weight:600;
+    width:100%;
+    padding:20px;
+    font-size: 1.5rem;
+}
+.bmr-calculator form{
+    padding:20px;
+    margin:10px;
+}
+.bmr-calculator form h3{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin:16px 0 10px 0;
+    font-weight: 700;
+    color:#131111
+}
+.bmr-calculator form input[type="text"]{
+    width:100%;
+    padding:10px 16px;
+    font-size:1rem;
+    font-weight: 500;
+    border-radius:5px ;
+    border:1px solid #6d7376;
+}
+.bmr-calculator form {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.bmr-calculator form #female{
+    margin-left:20px;
+}
+.bmr-calculator form .height,
+.bmr-calculator form .weight{
+    position: relative;
+}
+.bmr-calculator form .unit{
+    position: absolute;
+    top:50px;
+    right:20px;
+    color:#777;
+}
+.bmr-calculator .result .calculate-btn{
+    padding:8px 24px;
+    margin:16px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    border:none;
+    outline: none;
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.bmr-calculator .result{
+    text-align: center;
+    color:#4e4e4e;
+    font-size: 18px;
+    margin-bottom: 1.3rem;
+}
+.bmr-calculator .result .calories{
+    color:green;
+    font-size: 38px;
+    font-weight: 900;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.error-msg{
+    color:red;
+    font-size: 14px;
+    display: none;
+} */
+
+
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #333;
+}
+.bmr-calculator{
+    width: 450px;
+    padding:25px 35px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background:#fff;
+    border-radius:10px ;
+    box-shadow:0 0 1rem rgba(0, 0, 0, 0.9) ;
+}
+h2{
+    background: #181818;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    color:#fff;
+    padding:18px 50px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.bmr-input{
+    margin-top: 4rem;
+}
+h3{
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+    font-weight: bold;   
+}
+input[type="text"]{
+    width:100%;
+    padding:8px;
+    margin: 10px 0 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    background:#e4e2e2 ;
+    border: none;
+    outline: none;
+}
+input[type="text"]:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+.gender h3{
+    margin-bottom: 0.5rem;
+}
+.gender input[type="radio"]{
+    width:16px;
+    height:16px;
+}
+.gender label{
+    font-size: 1.12rem;
+}
+#female{
+    margin-left: 4rem;
+}
+.height ,.weight{
+    position: relative;
+}
+.unit{
+    position: absolute;
+    top: 50px;
+    right:10px;
+    color:#696565;
+}
+.result{
+    margin-top:1.2rem;
+    text-align: center;
+}
+.calculate-btn{
+    padding: 10px 40px;
+    background: #333;
+    color:#fff;
+    font-size: 1.3rem;
+    border-radius: 10px;   
+    border: none;
+    outline: none;
+}
+.calculate-btn:active,
+.calculate-btn:hover{
+    background: #181818;
+    font-size:1.4rem;
+}
+.result-msg{
+    margin-top:1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:#141212;
+}
+.calories{
+    vertical-align: middle;
+    color:#181818;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.error-msg{
+    margin-top: 1rem;
+    color:red;
+    display: none;
+    font-size: 1rem;
+}
+.error-msg.active{
+    display: block;
+}
+input[type="text"].invalid{
+    border: 1px solid red;
+}

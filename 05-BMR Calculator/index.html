@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator</title>
+    <link rel="stylesheet" href="styel.css">
+
+</head>
+
+<body>
+    <div class="bmr-calculator">
+        <h2>BMR Calculator</h2>
+
+        <div class="bmr-input">
+            <form action="">
+               
+                <div class="age">
+                    <h3>Age</h3>
+                    <input type="text" value="18" id="age">
+                </div>
+
+                <div class="gender">
+                    <h3>Gender</h3>
+                    <input type="radio" value="male" name="gender" id="male" checked>
+                    <label for="male">Male</label>
+                    <input type="radio" value="female" name="gender" id="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div class="height">
+                    <h3>Height</h3>
+                    <input type="text" value="19" id="height">
+                    <div class="unit">cm</div>
+                </div>
+
+                <div class="weight">
+                    <h3>Weight</h3>
+                    <input type="text" value="65" id="weight">
+                    <div class="unit">Kg</div>
+                </div>
+            </form>
+        </div>
+
+        <div class="result">
+            <button class="calculate-btn">Calculator</button>
+
+            <div class="result-msg">
+                <span class="calories">1,604</span>
+                Calories/day
+            </div>
+                        
+            <div class="error-msg">
+                <p>Please enter all the details correctly</p>
+            </div>
+    
+        </div>
+        
+
+        </div>
+        <script src="app.js"></script>
+</body>
+
+</html>
