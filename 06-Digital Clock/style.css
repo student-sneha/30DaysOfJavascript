@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Robot",sans-serif;
+    box-sizing: border-box;
+}
+.main{
+    width:100%;
+    min-height: 100vh;
+    color:#fff;
+    background: linear-gradient(45deg,#08001f,#232323);
+    position: relative;
+}
+.container{
+    width: 800px;
+    height:180px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgba(89, 70, 87, 0.49);
+}
+.clock{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(98, 0, 255, 0.11);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    animation: animate 3s linear 2s infinite;
+}
+@keyframes animate {
+    0%{
+       box-shadow:  6px 10px 20px rgba(139, 121, 137, 0.636);
+       flex-shrink: calc(20deg);
+    }
+}
+.clock span{
+    font-size: 86px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+}
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    left:50%;
+    bottom:-4px;
+    transform: translateX(-50%);
+
+}
+#hrs::after{
+    content: "Hours";
+}
+#min::after{
+    content: "Min";
+}
+#sec::after{
+    content: "Sec";
+}
