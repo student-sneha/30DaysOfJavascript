@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppoins", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+.container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  box-shadow: 0 0px 1rem rgb(37, 27, 27);
+  padding: 30px 40px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: #b9c3cb;
+  max-width: 550px;
+}
+h1 {
+  text-align: center;
+  font-size: 3.3rem;
+  color: #050506;
+}
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+  color: #464445;
+}
+.btn-container {
+  margin-top: 2rem;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 50%;
+  margin-left: 20px;
+  text-align: center;
+}
+.btn {
+  height: 200px;
+  width: 200px;
+}
+.red {
+  background-color: #d95980;
+  border-radius: 200px 0 0 0;
+}
+.red:active {
+  box-shadow: 0px 0px 16px #120d0e;
+}
+.green {
+  background-color: #63b672;
+  border-radius: 0 200px 0 0;
+}
+.green:active {
+  box-shadow: 0px 0px 16px #2d4532;
+}
+.yellow {
+  background-color: #f99b45;
+  border-radius: 0 0 0 200px;
+}
+.yellow:active {
+  box-shadow: 0px 0px 16px #6a5440;
+}
+.purple {
+  background-color: #819ff9;
+  border-radius: 0 0 250px 0;
+}
+.purple:active {
+  box-shadow: 0px 0px 16px #120d0e;
+}
+.flash {
+  background-color: #fff;
+}
+.user {
+  background-color: rgb(59, 24, 34);
+}
+.game {
+  color: #aa2d2d;
+  font-size: 2.5rem;
+}
+
+.score {
+  color: #0e2054;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/*  Responsive css  */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 45px;
+      }
+      h2 {
+        font-size: 1px;
+      }
+  .container {
+    width: 80%;
+  }
+  .btn-container {
+    width: 100%;
+  }
+  .btn {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 80%;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .btn-container {
+    width: 100%;
+  }
+  .btn {
+    width: 50%;
+  }
+}
