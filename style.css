@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    /* background: #181b25; */
+    background: linear-gradient(126deg,#7d6f6f,#624f96);
+}
+.container{
+    background-color: #b6c5e1;
+    max-width:700px;
+    width:80%;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:30px 40px 60px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 4px 10px 1rem rgba(31, 29, 29, 0.805);
+}
+.container h1{
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.container h1::after{
+    content: "";
+    width:75px;
+    height:3px;
+    border-radius: 3px;
+    background: rgb(52, 58, 64);
+    position: absolute;
+    bottom: -10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.container #quote{
+    font-size: 26px;
+    width: 100%;
+    margin-bottom: 2rem;
+    color:#181b25;
+    display: none;
+}
+#quote::before ,#quote::after {
+    content: '"';
+}
+span{
+    float: right;
+    position: relative;
+    display: none;
+    font-weight: 700;
+}
+span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgb(48, 55, 63);
+    position: absolute;
+    top:50%;
+    left: -28px;
+}
+.div{
+    position: relative;
+}
+button{
+    background: #32384b;
+    color:#fff;
+    border-radius: 25px;
+    padding:10px 26px;
+    border-radius: 25px;
+    border: 1px solid rgb(28, 29, 30);
+    cursor: pointer;
+    position: absolute;
+    bottom: -50px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+button:hover{
+    box-shadow: 0 2px 4px rgb(26, 27, 28);
+    background-color: #32384b;
+}
+/* Responsive  */
+@media screen and (max-width:900px){
+    .container{
+        width: 100%;
+    }
+    .container h1{
+        font-size: 24px;
+    }
+    #quote {
+        font-size: 18px;
+    }
+    span{
+        position: absolute;
+        bottom: 35px;
+        right: 10px;
+    }
+    button{ 
+        width: 50%;
+    }
+    
+}
