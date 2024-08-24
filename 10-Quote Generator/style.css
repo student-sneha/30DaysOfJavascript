@@ -12,7 +12,7 @@ body{
     background: linear-gradient(126deg,#7d6f6f,#624f96);
 }
 .container{
-    background-color: #b6c5e1;
+    background-color: #fff;
     max-width:700px;
     width:80%;
     position: absolute;
