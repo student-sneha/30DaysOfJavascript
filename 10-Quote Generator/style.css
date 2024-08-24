@@ -8,8 +8,8 @@
 body{
     width:100%;
     height:100vh;
-    /* background: #181b25; */
-    background: linear-gradient(126deg,#7d6f6f,#624f96);
+    background: linear-gradient(126deg,#9b8e8e,#5b4c83);
+
 }
 .container{
     background-color: #fff;
