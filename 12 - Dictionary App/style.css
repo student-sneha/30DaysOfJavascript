@@ -1,0 +1,120 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+body{
+    width:100%;
+    height:100vh;
+    /* background:linear-gradient(136deg, #8a7ac9,#a2509a); */
+    background:linear-gradient(136deg, #40307e,#a47ea0);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    max-width: 800px;
+    margin:3rem auto;
+}
+h1{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 2.83rem;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+.search-box{
+    background-color: #fff;
+    width:65%;
+    padding:35px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 1rem rgba(42, 25, 43, 0.545);
+}
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.input-box input{
+    padding:5px;
+    width:70%;
+    border:none;
+    outline: none;
+    border-bottom: 3px solid #a695f0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.input-box button{
+    padding:10px 0;
+    width:25%;
+    background-color: #7c6bc9;
+    border:none;
+    outline: none;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+button:hover{
+    background-color: #6e6496;
+    box-shadow: 0px 5px 6px rgba(42, 25, 43, 0.545);
+
+}
+.result{
+    position: relative;
+}
+.result h3{
+    font-size: 2rem;
+    color:#1f194c;
+}
+.result .word{
+    display: flex;
+    justify-content: space-between;
+    margin-top:1.4rem;
+}
+.result h4{
+    font-size: 1.2rem;
+    padding-left: 10px;
+    color:#1f194c;
+    margin-top: 1.2rem;
+}
+.result .details{
+    display: flex;
+    color:#8d8e9f;
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+}
+.word-meaning, .word-example, .synonyms {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #575a7b;
+    font-style: italic;
+    border-left: 5px solid #ae9cff;
+    padding-left: 20px;
+}
+.error {
+    margin-top: 50px;
+    text-align: center;
+}
+/* Responsive css */
+@media screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+    }
+    .container h1{
+        font-size: 2rem;
+    }
+    .container .search-box{
+        width: 90%;
+    }
+    .container input{
+        width: 70%;
+    }
+    .container button{
+        width:40%;
+    }
+  }
