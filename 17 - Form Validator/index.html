@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Registration form</h1>
+    <form name="RegForm" onsubmit="return validateForm()">
+      <div class="form-group name">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          placeholder="enter your name"
+          id="name"
+          name="Name"
+          class="input-text"
+        />
+        <span id="name-error" class="error-message"></span>
+      </div>
+      <div class="form-group email">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          placeholder="enter your email"
+          name="email"
+          id="email"
+          class="input-text"
+        />
+        <span class="error-message" id="email-error"></span>
+      </div>
+      <div class="form-group password">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          placeholder="enter your password"
+          name="password"
+          id="password"
+          class="input-text"
+        />
+        <span class="error-message" id="password-error"></span>
+      </div>
+
+      <div class="form-group gender">Gender:
+        <div class="value">
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              value="male"
+            />
+            <label for="female"  class="female">female</label>
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+            />
+    </div>
+      </div>
+
+      <div class="form-group subject">
+        <label for="subject">  Select Your Course</label>
+        <select id="subject" name="Subject">
+            <option value="">
+                Select Course
+            </option>
+            <option value="BTECH">
+                BTECH
+            </option>
+            <option value="BBA">
+                BBA
+            </option>
+            <option value="BCA">
+                BCA
+            </option>
+            <option value="B.COM">
+                B.COM
+            </option>
+            <option value="MCA">
+                MCA
+            </option>
+        </select>
+        <span id="subject-error" class="error-message"></span>
+      </div>
+
+      <div class="form-group comment"></div>
+        <label for="comment">College Name</label>
+        <textarea name="comment" id="comment"></textarea>
+      </div>
+      
+      <div class="form-group agree">
+        <input type="checkbox" id="agree" name="Agree" class="btn"/>
+        <label for="agree">I agree to the above
+            information</label>
+        <span id="agree-error" class="error-message"></span>
+      </div>
+
+      <div class="form-group button">
+        <input type="submit" value="Send" name="Submit" class="btn" id="submit">
+        <input type="reset" value="Reset" name="Reset" class="btn" id="reset">
+      </div>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
