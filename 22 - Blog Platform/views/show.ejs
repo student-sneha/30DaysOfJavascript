@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Blog</title>
+    <link rel="stylesheet" href="/css/Show.css">
+</head>
+<body>
+    <div class="container">
+    <div class="blog">
+            <img src="<%=blog.image %>" alt=""Image>
+            <h3 class="title"><%= blog.title%></h3>
+            <h4 class="description"><%=blog.description%></h4>
+        </div>
+       <button>
+        <a href="http://localhost:3000/blog" class="more">More</a>
+       </button>
+    </div>
+   
+</body>
+</html>

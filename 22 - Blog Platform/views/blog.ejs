@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+    <main>
+        <div class="conatiner">
+            <h1 class="blog-heading">All Blogs</h1>
+            <div class="blog-content">
+                <%for(let blog of blogs) {%>
+                    <div class="blog-card">
+                    <h3 class="title"><%= blog.title%></h3>
+                    <h4 class="description"><%= blog.description%></h4>
+                    </div>
+                <% } %>
+            </div>
+        </div>   
+    </main>
+</body>
+</html>

@@ -26,12 +26,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .container {
   max-width: var(--max-width);
   margin-inline: auto;
 }
-
 nav {
   position: fixed;
   isolation: isolate;

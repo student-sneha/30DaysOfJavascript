@@ -1,0 +1,32 @@
+
+main{
+    background-color: #4d494c;
+    max-height: 100vh;
+    width: 100%;
+  }
+  .conatiner{
+    padding:40px;
+    width:100%;
+  }
+  .blog-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #212020;
+  }
+  .blog-content{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100vh;
+  }
+  .blog-card{
+    width:320px;
+    height:320px;
+    background-color: #ccc;
+    margin:20px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+    box-shadow: 0 20px 1rem rgba(0, 0, 0, 0.1);
+  }
+  
