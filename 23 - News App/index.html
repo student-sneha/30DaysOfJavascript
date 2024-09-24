@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khabar.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <nav>
+        <div class="nav-header container flex">
+                <a href="#" class="logo">
+                     Khabar<span>.com</span>
+                </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li><a href="#" class="hover nav-item" id="Education" onclick="onNavItemClick('Education')">Education</a></li>
+                    <li><a href="#" class="hover nav-item" id="Finance" onclick="onNavItemClick('Finance')">Finance </a></li>
+                    <li><a href="#" class="hover nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</a></li>
+                </ul>
+            </div>
+            <div class="search flex">
+                <form action="">
+                 <input type="text" placeholder="Search new.." name="search" id="input-box">
+                 <button class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="card-container container flex">
+            
+        </div>
+    </main> 
+
+    <script src="app.js"></script>
+</body>
+</html>
