@@ -95,7 +95,7 @@ main{
   }
 .header-about{
   margin-top: 10%;
-  padding-inline: 20px;
+  padding-inline: 30px;
 }
 .text h2{
   font-size: 2.6rem;
@@ -472,7 +472,7 @@ nav .fas{
     font-size: 30px;
   }
   .text h1{
-    font-size: 25px;
+    font-size: 20px;
   }
   .text span{
     font-size: 30px;
