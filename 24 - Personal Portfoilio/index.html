@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+<div id="home">
+  <div class="container">
+   <nav>
+    <div class="nav-header">
+      <div class="logo">
+        <a href="#">Sneha<span>Gupta</span></a>
+      </div>
+      <ul class="nav-links flex" id="sidemenu">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#services" class="nav-item">Services</a></li>
+        <li><a href="#portfolio" class="nav-item">Projects</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+        <i class="fas fa-times close" id="closebtn"></i>
+      </ul>
+      <i class="fas fa-bars" id="bars"></i>
+    </div>
+  </nav>
+</div>
+      
+<main>
+        <div class="container main">
+          <div class="header-about">
+            <div class="text">
+              <h2>Hii, I'm Sneha</h2>
+              <h1>A Frontend<span>Developer</span></h1>
+              <p>
+                I am a passionate and self-motivated Frontend Developer skilled in building responsive and interactive websites using HTML, CSS, and JavaScript.
+        
+                 Seeking an opportunity to contribute to a team where I can develop my abilities further and make a meaningful impact.
+              </p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/snehagupta12"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/@snehagupta14a"> <i class="fa-brands fa-youtube"></i></a>
+              <a href="https://github.com/student-sneha/30DaysOfJavascript.git"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.instagram.com/snehagupta14g?igsh=MXRndXRpdzM0d2Jz"><i class="fa-brands fa-instagram"></i> </a>
+            </div>
+          </div>
+          <div class="myimg">
+            <img src="images/sneha2.jpg" alt="image" />
+          </div>
+        </div>
+      </main>
+
+    <!-- About section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/img2.jpeg" class="about-img" alt="image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="title">About Me</h1>
+            <p>
+                I am an aspiring Frontend Developer with a strong interest in building intuitive and responsive web applications. I have a solid understanding of HTML, CSS, and JavaScript, and I am eager to expand my knowledge of modern frameworks and libraries like React. With a focus on clean design and seamless user experience, I am always looking for opportunities to apply my skills and grow as a developer. I thrive in collaborative environments and am excited to start my professional journey in frontend development.
+            </p>
+            <div class="tab-title">
+              <p class="tab-links active-links" onclick="openTab('Skills')">Skills</p>
+              <!-- <p class="tab-links"onclick="openTab('Education')">Education</p> -->
+            </div>
+            
+            <div class="tab-content " id="skills">
+              <ul>
+                <li><span><i class="fa-brands fa-html5"></i></span></li>
+                <li><span><i class="fa-brands fa-css3"></i></span></li>
+                <li><span><i class="fa-brands fa-js"></i></span></li>
+                <li><span><i class="fa-brands fa-java"></i></span></li>
+              </ul>
+            </div>
+
+            <!-- <div class="tab-content" id="Education">
+              <ul>
+                <li><span>Education Developer</span><br>Web Developer</li>
+                <li><span>Java</span><br>Web Developer</li>
+                <li><span>DSA</span><br>Web Developer</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" >
+      <div class="container service">
+          <h1 class="title">My Services</h1>    
+          <div class="services-list">
+            <div class="service-box">
+              <i class="fa-solid fa-code"></i>
+              <h2>Frontend developer</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni, ad, aut deserunt aspernatur voluptas quaerat dolore tempora iure facere eos tempore minima illo commodi itaque ullam? Nisi, ullam ipsum.</p>
+              <a href="#">Learn more</a>
+            </div>
+            <div class="service-box">
+              <i class="fa-brands fa-java"></i>
+              <h2>Java</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni, ad, aut deserunt aspernatur voluptas quaerat dolore tempora iure facere eos tempore minima illo commodi itaque ullam? Nisi, ullam ipsum.</p>
+              <a href="#">Learn more</a>
+            </div>
+            <div class="service-box">
+              <i class="fa-solid fa-code"></i>
+              <h2>Problem Solving</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni, ad, aut deserunt aspernatur voluptas quaerat dolore tempora iure facere eos tempore minima illo commodi itaque ullam? Nisi, ullam ipsum.</p>
+              <a href="#">Learn more</a>
+            </div>  
+          </div>
+      </div>
+  </section>
+
+  <!-- Portfolio -->
+   <div id="portfolio">
+    <div class="container service">
+      <div class="title">Portfolio</div>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/todo.png" alt="image">
+        <div class="layer">
+          <h3>TO Do List App</h3>
+          <p>Built a fully responsive portfolio website using HTML, CSS, and JavaScript.
+            Implemented smooth scrolling, interactive sections, and animated elements to enhance user experience.</p>
+             <a href="https://student-sneha.github.io/Todo-List/"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/music.png" alt="image">
+        <div class="layer">
+          <h3>Music Player App</h3>
+          <p>A music player using HTML, CSS, and JavaScript is a simple web-based application that allows users to play audio files directly from the browser.
+        </p><a href="https://student-sneha.github.io/Music-Player/"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="images/recipe.png" alt="image">
+        <div class="layer">
+          <h3>Recipe App</h3>
+          <p> responsive weather application built with HTML, CSS, and JavaScript. This app allows users to search for real-time weather updates by city, displaying current conditions, temperature, humidity, and more. Simple design and smooth animations provide a great user experience!!</p>
+          <a href="https://student-sneha.github.io/Recipe-App/"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/student-sneha/30DaysOfJavascript.git" class="btn btn2">See More</a>
+  </div>
+ </div>
+
+ <div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="title">Contact Me</h1>
+        <p><i class="fas fa-paper-plane"></i>snehakhandelwal373@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i>0122343545</p>
+        <div class="socail-icons">
+          <a href="https://www.linkedin.com/in/snehagupta12"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@snehagupta14a"> <i class="fa-brands fa-youtube"></i></a>
+          <a href="https://github.com/student-sneha/30DaysOfJavascript.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/snehagupta14g?igsh=MXRndXRpdzM0d2Jz"><i class="fa-brands fa-instagram"></i> </a>
+        </div>
+        <a href="images/Sneha resume.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" placeholder="Your Name" name="Name" required>
+          <input type="text" placeholder="Your email" name="Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class=  "btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Sneha Gupta, Made with <i class="fas fa-heart"></i></p>
+  </div>
+ </div>
+
+</div>
+</div>
+    <script src="app.js"></script>
+  </body>
+</html>

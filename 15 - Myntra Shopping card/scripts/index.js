@@ -50,4 +50,3 @@ function displayItemsOnHomePage() {
   });
   itemsContainerElement.innerHTML = innerHtml;
 }
-}
