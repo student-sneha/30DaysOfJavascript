@@ -485,10 +485,22 @@ nav .fas{
     width:200px;
     height:100vh;
     padding-top:50px;
+    display: none;
   }
   .nav-links li{
     display: block;
     margin: 25px;
+  }
+  .nav-links li a{
+    color: #eeeeee;
+    font-size: 1.12rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in;
+  }
+  .nav-links li a:hover{
+    color: #d0caca;
+    opacity: 1;
+    font-size: 30px;
   }
   nav .fas{
     display: block;
