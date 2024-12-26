@@ -18,7 +18,6 @@
     navItem.getAttribute("id","nav-item");
   });
   
-
   const scriptURL = 'https://script.google.com/macros/s/AKfycbx3Q6BmG-mT3hKcUfYwOrvYsDbdG82rHiLAZePyJyFewBBriK3-9SJKYXV9ONJzSKueYQ/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.querySelector("#msg");

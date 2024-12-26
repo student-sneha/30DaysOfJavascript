@@ -414,7 +414,7 @@ nav {
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  
   .product__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -442,7 +442,7 @@ nav {
 
   .nav__menu__btn {
     display: none;
-  }
+  } 
 
   .nav__logo .logo {
     color: var(--primary-color);
